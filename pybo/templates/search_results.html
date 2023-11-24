@@ -1,0 +1,30 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+{% if results %}
+    <h2>검색 결과 - "{{ query }}"</h2>
+    <div class="row">
+        {% for result in results %}
+            {% if query.lower() in result.title.lower() %}
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="{{ result.image_url }}" class="bd-placeholder-img card-img-top" alt="Thumbnail" width="200" height="250">
+                        <div class="card-body">
+                            <p class="card-text">{{ result.title }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="{{ result.link }}" target="_blank" class="btn btn-sm btn-outline-secondary">View</a>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Learn More</button>
+                                </div>
+                                <small class="text-muted">{{ result.source }}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% else %}
+    <p>검색 결과가 없습니다.</p>
+{% endif %}
