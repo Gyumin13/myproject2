@@ -6,7 +6,7 @@ bp = Blueprint('main', __name__, url_prefix='/')
 data = [
   {
      "title": "코딩을 처음 하는 초보자들도 쉽게 배울 수 있는 초간단 파이썬(python) 무료 강의!",
-     "image_url": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA4MTBfMjEz%2FMDAxNjkxNjMzMzc4OTI2.GEm4T8cgmJxGS1v7GESZqHMnuu9dXRkbHZLC7scXnCUg.ILF9QuARQkbg5FQjoMfxDpf4gb1hVNF5m6WMJJKcAdsg.PNG.alsrud9583%2FPython-logo-notext.svg.png&type=a340",
+     "image_url": "https://i.ytimg.com/vi/kWiCuklohdY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDSzkhzgjYnt4DpcxHMmMKwCKHXgA",
      "link": "https://youtu.be/kWiCuklohdY?si=qQu5-g4U0D1_YvJe",
      "source": "나도코딩 YOUTUBE"
   },
@@ -347,7 +347,6 @@ data = [
      "source": "안될과학 YOUTUBE"
   }
 ]
-
 
 
 @bp.route('/')
